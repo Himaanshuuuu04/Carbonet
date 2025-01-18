@@ -9,7 +9,7 @@ const Signup = () => {
         </h2>
         <p className="mt-2 text-center text-sm text-gray-300">
           Already have an account?{" "}
-          <a href="#" className="font-medium text-blue-400 hover:text-blue-300">
+          <a href="#Login" className="font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200">
             Sign in here
           </a>
         </p>
@@ -90,7 +90,7 @@ const Signup = () => {
           <div>
             <button
               type="submit"
-              className="w-full flex justify-center py-3 px-4 text-white font-semibold bg-blue-600 hover:bg-blue-500 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
+              className="w-full flex justify-center py-3 px-4 text-white font-semibold bg-blue-600 hover:bg-blue-500 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition-colors duration-200"
             >
               Sign Up
             </button>
