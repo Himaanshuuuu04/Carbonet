@@ -1,7 +1,7 @@
 import Home from "./routes/Home";
 import Login from "./routes/Login";
 import SparklesCore from "./components/bg";
-import './App.css'
+
 import { HashRouter, Routes, Route} from "react-router-dom";
 import Signup from "./routes/SignUp";
 import ForgotPassword from "./routes/ForgotPassword";
@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <>
-    <div className='w-full absolute inset-0 h-screen'>
+    <div className='w-full  inset-0 h-screen fixed'>
             <SparklesCore
               id="tsparticlesfullpage"
               background="transparent"
@@ -37,10 +37,10 @@ export default function App() {
                        <Route path="/ProfileComplete" element={<ProfileComplete />} />
                        <Route path="*" element={<NotFound />} />
                        <Route element={<AuthenticatedRoutes />}> */}
-                          <Route path="Login" element={<Login />} / >
-                         <Route path="/" element={<Home />} / >
-                         <Route path="/Signup" element={<Signup />} / >
-                         <Route path="/ForgotPassword" element={<ForgotPassword/>} / >
+                        <Route path="Login" element={<Login />} / >
+                        <Route path="/" element={<Home />} / >
+                        <Route path="/Signup" element={<Signup />} / >
+                        <Route path="/ForgotPassword" element={<ForgotPassword/>} / >
                          {/* <Route path="/Home" element={<Home />}/ >
                          <Route path="/Moviedetails/:media_type/:id" element={<Moviedetails />} />
                          <Route path="/Favourite" element={<Favourite />} />
