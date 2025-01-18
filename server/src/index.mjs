@@ -1,6 +1,8 @@
 import express from 'express'
 import axios from "axios";
 import cors from "cors";
+import { validationResult } from 'express-validator';
+import { emissionsValidationSchema } from './utils/emissionsValidationSchema.mjs';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -11,7 +13,11 @@ app.use(express.json())
 const port = process.env.PORT || 3000
 const CLIMATIQ_API_KEY = process.env.CLIMATIQ_API_KEY;
 
-app.post('/api/emissions', async (req, res) => {
+app.post('/api/emissions', emissionsValidationSchema, async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
     const { energy, unit } = req.body;
     try {
         const response = await axios.post(
