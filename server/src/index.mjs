@@ -1,6 +1,7 @@
 import express from 'express'
 import axios from "axios";
 import cors from "cors";
+import userRoutes from './routes/user.mjs';
 import { validationResult } from 'express-validator';
 import { emissionsValidationSchema } from './utils/emissionsValidationSchema.mjs';
 import dotenv from 'dotenv';
@@ -10,6 +11,7 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use('/user', userRoutes);
 const port = process.env.PORT || 3000
 const CLIMATIQ_API_KEY = process.env.CLIMATIQ_API_KEY;
 
