@@ -1,15 +1,25 @@
 import Home from "./routes/Home";
 import Login from "./routes/Login";
 import SparklesCore from "./components/bg";
-
+import { useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Signup from "./routes/SignUp";
 import ForgotPassword from "./routes/ForgotPassword";
+import {useSelector,useDispatch} from "react-redux"
+import {checkSession} from "./redux/slice/authSlice"
+import {store} from "./redux/store";
+import { Provider } from "react-redux";
+import AuthenticatedRoutes from "./routes/AuthentiictedRoutes";
 export default function App() {
-
+//  const dispatch = useDispatch();
+//   const {islogged,profileCompleted,loading,error} = useSelector((state) => state.auth);
+//   useEffect(() => {
+//     document.title = "Carbonet";
+//   }) 
 
   return (
     <>
+      <Provider store={store}>
       <div className='w-full inset-0 h-screen bg-gradient-to-r from-green-950 via-black to-green-950 fixed -z-50'>
         <SparklesCore
           id="tsparticlesfullpage"
@@ -24,40 +34,22 @@ export default function App() {
       </div>
       {/* <BackgroundGradientAnimation> */}
 
-      {/* <Provider store={store}> */}
-      {/* <GenreProvider>
-         <AuthProvider>
-           <LikedMoviesProvider>
-             <SearchProvider>
-               <AiRecommendationProvider>
-                 <FriendProvider> */}
+     
       <HashRouter>
         <Routes>
-          {/* <Route path="/Login" element={<Login />} />
-                       <Route path="/ProfileComplete" element={<ProfileComplete />} />
-                       <Route path="*" element={<NotFound />} />
-                       <Route element={<AuthenticatedRoutes />}> */}
+        
+        <Route element={<AuthenticatedRoutes />}>
+              
+              <Route path="/Signup" element={<Signup />} />
+          
+              <Route path="/" element={<Home />} />
+              <Route path="/ForgotPassword" element={<ForgotPassword />} />
+          </Route>
           <Route path="Login" element={<Login />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/Signup" element={<Signup />} />
-          <Route path="/ForgotPassword" element={<ForgotPassword />} />
-          {/* <Route path="/Home" element={<Home />}/ >
-                         <Route path="/Moviedetails/:media_type/:id" element={<Moviedetails />} />
-                         <Route path="/Favourite" element={<Favourite />} />
-                         <Route path="/TopRated" element={<TopRated />} />
-                         <Route path="/Friends" element={<Friends />} />
-                         <Route path="WatchHistory" element={<WatchHistroy />} /> */}
-          {/* </Route> */}
         </Routes>
       </HashRouter>
-      {/* </FriendProvider>
-               </AiRecommendationProvider>
-             </SearchProvider>
-           </LikedMoviesProvider>
-         </AuthProvider>
-       </GenreProvider>  */}
-      {/* </Provider> */}
-      {/* </BackgroundGradientAnimation> */}
+      
+      </Provider>
     </>
   )
 }

@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@heroui/react": "^2.6.13",
+    "@reduxjs/toolkit": "^2.5.0",
     "@tsparticles/engine": "^3.7.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.7.1",
