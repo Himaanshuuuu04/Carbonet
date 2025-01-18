@@ -4,7 +4,8 @@ import SparklesCore from "./components/bg";
 import './App.css'
 import { HashRouter, Routes, Route} from "react-router-dom";
 import Signup from "./routes/SignUp";
-function App() {
+import ForgotPassword from "./routes/ForgotPassword";
+export default function App() {
  
 
   return (
@@ -39,6 +40,7 @@ function App() {
                           <Route path="Login" element={<Login />} / >
                          <Route path="/" element={<Home />} / >
                          <Route path="/Signup" element={<Signup />} / >
+                         <Route path="/ForgotPassword" element={<ForgotPassword/>} / >
                          {/* <Route path="/Home" element={<Home />}/ >
                          <Route path="/Moviedetails/:media_type/:id" element={<Moviedetails />} />
                          <Route path="/Favourite" element={<Favourite />} />
@@ -60,4 +62,4 @@ function App() {
   )
 }
 
-export default App
+
