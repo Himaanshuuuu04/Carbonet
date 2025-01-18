@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./navbar-menu";
+import { Link } from "react-router-dom";
 import { cn } from "../libs/utils";
 
 export default function Navbar({ className }) {
@@ -9,10 +10,10 @@ export default function Navbar({ className }) {
     <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
       <Menu setActive={setActive}>
         {/* Services Menu */}
-        <MenuItem setActive={setActive} active={active} item="Services">
+        <MenuItem setActive={setActive} active={active} item="Home">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/calculate-emissions">Calculate Emissions</HoveredLink>
-            <HoveredLink href="/optimization-tips">Optimization Tips</HoveredLink>
+            <HoveredLink href="/Login"><Link to ="/Login">Login</Link></HoveredLink>
+            <HoveredLink href="/Signup"><Link to ="/SignUp">Signup</Link></HoveredLink>
             <HoveredLink href="/reports">Generate Reports</HoveredLink>
             <HoveredLink href="/consultation">Consultation Services</HoveredLink>
           </div>

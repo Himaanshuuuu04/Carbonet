@@ -1,7 +1,7 @@
 import Home from "./routes/Home";
 import Login from "./routes/Login";
 import SparklesCore from "./components/bg";
-import './App.css'
+
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Signup from "./routes/SignUp";
 import ForgotPassword from "./routes/ForgotPassword";
@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <>
-      <div className='w-full absolute inset-0 h-screen'>
+      <div className='w-full inset-0 h-screen bg-gradient-to-r from-green-950 via-black to-green-950 fixed -z-50'>
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
