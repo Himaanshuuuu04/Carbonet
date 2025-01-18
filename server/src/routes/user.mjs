@@ -10,11 +10,9 @@ router.get('/check-session', async (req, res) => {
 
         const session = await account.get();
         if (!session) throw new Error('No active session found');
-        
-        // const prefs = await account.getPrefs();
-        // const profileCompleted = prefs?.profileCompleted === true;
-        
-        
+
+        const prefs = await account.getPrefs();
+        const profileCompleted = prefs?.profileCompleted === true;
 
         res.status(200).json({
             logged: true,
@@ -68,8 +66,8 @@ router.post('/login', async (req, res) => {
         const prefs = await account.getPrefs();
         const profileCompleted = prefs?.profileCompleted === true;
         res.status(200).json({ session, profileCompleted });
-       
-        
+
+
     } catch (error) {
         console.error("Error during session creation:", error);
         res.status(400).json({ error: error.message });
@@ -82,13 +80,13 @@ router.post('/complete-profile', async (req, res) => {
         const session = await account.getSession('current');
         const userId = session.userId;
         await database.updateDocument(databaseId, collectionId, userId, {
-            userId : userId,
+            userId: userId,
             userName: userName,
             email: session.email,
-            createdOn : new Date().toISOString(),
+            createdOn: new Date().toISOString(),
             phoneNumber: phoneNumber,
-            age : age,
-            
+            age: age,
+
         });
         await account.updatePrefs({ profileCompleted: true });
 
@@ -98,7 +96,7 @@ router.post('/complete-profile', async (req, res) => {
     }
 });
 
-router.get('/auth/github',async (req, res) => {
+router.get('/auth/github', async (req, res) => {
     try {
         const successRedirect = 'https://shaadi.com/';
         const failureRedirect = 'https://amazon.com/';
@@ -113,7 +111,7 @@ router.get('/auth/github',async (req, res) => {
         const prefs = await account.getPrefs();
         const profileCompleted = prefs?.profileCompleted === true;
         res.status(200).json({ session, profileCompleted });
-        
+
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
