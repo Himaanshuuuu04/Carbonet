@@ -11,6 +11,7 @@ export const checkSession = createAsyncThunk(
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                credentials: 'include',
             });
 
             if (!response.ok) {
@@ -20,6 +21,7 @@ export const checkSession = createAsyncThunk(
             const data = await response.json();
             return { logged: data.logged, profileCompleted: data.profileCompleted };
         } catch (error) {
+            console.error('Error checking session:', error);
             return rejectWithValue(error.message);
         }
     }
