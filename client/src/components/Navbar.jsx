@@ -31,19 +31,19 @@ export default function Navbar({ className }) {
             <ProductItem
               title="Energy Consumption Tool"
               href="/energy-consumption"
-              src="https://carbonet-client.s3.amazonaws.com/energy-consumption.png"
+              src="https://www.constructionworld.in/assets/uploads/4cedb8ae579c8b6711c873fcddff639d.jpg"
               description="Analyze energy usage for your internet activities."
             />
             <ProductItem
               title="Carbon Footprint Tracker"
               href="/carbon-tracker"
-              src="https://carbonet-client.s3.amazonaws.com/carbon-tracker.png"
+              src="https://www.samuchit.com/images/carbon-footprint-calculator-1.jpg"
               description="Track your overall carbon footprint online."
             />
             <ProductItem
               title="Offset Suggestions"
               href="/offset-suggestions"
-              src="https://carbonet-client.s3.amazonaws.com/offset-suggestions.png"
+              src="https://media.greenmatters.com/brand-img/bPhIjl_kL/0x0/air-pollution-carbon-emissions-1585588214294.jpg"
               description="Find ways to offset your emissions effectively."
             />
           </div>
