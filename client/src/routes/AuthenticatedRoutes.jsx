@@ -5,7 +5,7 @@ import { checkSession } from '../redux/slice/authSlice';
 
 export default function AuthenticatedRoutes() {
   const dispatch = useDispatch();
-  
+
   // Check session when the component mounts
   // useEffect(() => {
   //   console.log('Checking session...');

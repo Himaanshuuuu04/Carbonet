@@ -25,25 +25,25 @@ export default function Navbar({ className }) {
             <ProductItem
               title="Bandwidth Calculator"
               href="/bandwidth-calculator"
-              src="https://via.placeholder.com/140x70.png?text=Bandwidth+Calculator"
+              src="https://www.bobcloud.net/wp-content/uploads/2020/07/Azure-UK-speedtest-result-for-cloud-backup.jpg"
               description="Estimate your bandwidth-related emissions."
             />
             <ProductItem
               title="Energy Consumption Tool"
               href="/energy-consumption"
-              src="https://via.placeholder.com/140x70.png?text=Energy+Tool"
+              src="https://carbonet-client.s3.amazonaws.com/energy-consumption.png"
               description="Analyze energy usage for your internet activities."
             />
             <ProductItem
               title="Carbon Footprint Tracker"
               href="/carbon-tracker"
-              src="https://via.placeholder.com/140x70.png?text=Carbon+Tracker"
+              src="https://carbonet-client.s3.amazonaws.com/carbon-tracker.png"
               description="Track your overall carbon footprint online."
             />
             <ProductItem
               title="Offset Suggestions"
               href="/offset-suggestions"
-              src="https://via.placeholder.com/140x70.png?text=Offset+Suggestions"
+              src="https://carbonet-client.s3.amazonaws.com/offset-suggestions.png"
               description="Find ways to offset your emissions effectively."
             />
           </div>

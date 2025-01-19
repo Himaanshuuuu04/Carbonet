@@ -37,10 +37,10 @@ export default function App() {
           <Route path="Login" element={<Login />} />
 
           {/* Authenticated Routes (Protected) */}
-          <Route element={<AuthenticatedRoutes />}>
+          {/* <Route element={<AuthenticatedRoutes />}> */}
             <Route path="/ProfileComplete" element={<ProfileComplete />} />
             <Route path="/Dashboard" element={<Dashboard />} />
-          </Route>
+          {/* </Route> */}
         </Routes>
       </HashRouter>
     </Provider>

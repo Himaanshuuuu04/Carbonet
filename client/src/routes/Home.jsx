@@ -51,34 +51,34 @@ export default function Home() {
               </p>
             </div>
             <ul className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-              <li className="bg-white rounded-lg shadow-lg">
+            <li className="bg-white/20 rounded-lg shadow-lg">
                 <div className="px-6 py-8">
-                  <h3 className="text-lg font-medium leading-6">
+                  <h3 className="text-lg font-bold leading-6 ">
                     Measure
                   </h3>
-                  <p className="mt-2 text-base text-gray-500">
+                  <p className="mt-2 text-base text-gray-200">
                     Use our simple calculator to get an estimate of your carbon
                     footprint from internet usage.
                   </p>
                 </div>
               </li>
-              <li className="bg-white rounded-lg shadow-lg">
+              <li className="bg-white/20 rounded-lg shadow-lg">
                 <div className="px-6 py-8">
-                  <h3 className="text-lg font-medium leading-6">
+                  <h3 className="text-lg font-bold leading-6 ">
                     Track
                   </h3>
-                  <p className="mt-2 text-base text-gray-500">
+                  <p className="mt-2 text-base text-white">
                     Sign up for a free account to track your progress and get
                     insights on how to reduce your carbon footprint.
                   </p>
                 </div>
               </li>
-              <li className="bg-white rounded-lg shadow-lg">
+              <li className="bg-white/20 rounded-lg shadow-lg">
                 <div className="px-6 py-8">
-                  <h3 className="text-lg font-medium leading-6">
+                  <h3 className="text-lg font-bold leading-6 ">
                     Reduce
                   </h3>
-                  <p className="mt-2 text-base text-gray-500">
+                  <p className="mt-2 text-base text-gray-200">
                     Get tips and recommendations on how to reduce your carbon
                     footprint from internet usage.
                   </p>
