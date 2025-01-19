@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen  flex flex-col items-center text-white">
       {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 px-6 py-6 backdrop-blur-md shadow-lg z-50">
+      <header className="fixed top-0 left-0 right-0 px-6 py-6   z-50">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* <h1 className="text-2xl font-bold text-green-400">CarbonCalc</h1> */}
           <Navbar />
@@ -51,7 +51,7 @@ export default function Home() {
               </p>
             </div>
             <ul className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-            <li className="bg-white/20 rounded-lg shadow-lg">
+            <li className="bg-white/10 rounded-lg shadow-lg">
                 <div className="px-6 py-8">
                   <h3 className="text-lg font-bold leading-6 ">
                     Measure
@@ -62,7 +62,7 @@ export default function Home() {
                   </p>
                 </div>
               </li>
-              <li className="bg-white/20 rounded-lg shadow-lg">
+              <li className="bg-white/10 rounded-lg shadow-lg">
                 <div className="px-6 py-8">
                   <h3 className="text-lg font-bold leading-6 ">
                     Track
@@ -73,7 +73,7 @@ export default function Home() {
                   </p>
                 </div>
               </li>
-              <li className="bg-white/20 rounded-lg shadow-lg">
+              <li className="bg-white/10 rounded-lg shadow-lg">
                 <div className="px-6 py-8">
                   <h3 className="text-lg font-bold leading-6 ">
                     Reduce
