@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { verifyOtp, requestOtp } from "../redux/slice/authSlice"; // Update with correct path
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();  // Using navigate for redirection after successful login
