@@ -14,7 +14,7 @@ export default function Navbar({ className }) {
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/Login"><Link to ="/Login">Login</Link></HoveredLink>
             <HoveredLink href="/Signup"><Link to ="/SignUp">Signup</Link></HoveredLink>
-            <HoveredLink href="/Dashboard"><Link to ="/Dashboard">Signup</Link> </HoveredLink>
+            <HoveredLink href="/Dashboard"><Link to ="/Dashboard">Dashboard</Link> </HoveredLink>
             <HoveredLink href="https://foundation.mozilla.org/en/blog/ai-internet-carbon-footprint/">
               <Link to="https://foundation.mozilla.org/en/blog/ai-internet-carbon-footprint/">Carbon Footprint Report</Link></HoveredLink>
           </div>
