@@ -11,6 +11,7 @@ import { Provider } from "react-redux";
 import AuthenticatedRoutes from "./routes/AuthenticatedRoutes";
 import ProfileComplete from './routes/ProfileComplete';
 import Dashboard from "./routes/DashBoard";
+import About from "./routes/About";
 
 export default function App() {
   return (
@@ -35,6 +36,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="Login" element={<Login />} />
+          <Route path="*" element={<Home />} />
+          <Route path="/About" element={<About />} />
 
           {/* Authenticated Routes (Protected) */}
           {/* <Route element={<AuthenticatedRoutes />}> */}

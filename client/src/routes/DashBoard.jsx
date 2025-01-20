@@ -112,22 +112,22 @@ const Dashboard = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 mb-12">
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-gray-800 shadow-lg rounded-lg p-4 sm:p-6">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-green-950 bg-opacity-70 shadow-lg rounded-lg p-4 sm:p-6">
                     <h3 className="text-lg font-semibold text-gray-300">Total Carbon Emissions</h3>
                     <p className="text-2xl font-bold text-green-400">{emissionData.totalEmissions} kg CO2</p>
                 </div>
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-gray-800 shadow-lg rounded-lg p-4 sm:p-6">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-green-950 bg-opacity-70 shadow-lg rounded-lg p-4 sm:p-6">
                     <h3 className="text-lg font-semibold text-gray-300">Energy Consumed</h3>
                     <p className="text-2xl font-bold text-green-400">{emissionData.energyConsumed} kWh</p>
                 </div>
-                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-gray-800 shadow-lg rounded-lg p-4 sm:p-6">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-green-950 bg-opacity-70 shadow-lg rounded-lg p-4 sm:p-6">
                     <h3 className="text-lg font-semibold text-gray-300">Total Internet Usage</h3>
                     <p className="text-2xl font-bold text-orange-400">{internetUsageData.totalUsage} GB</p>
                 </div>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-6 mb-12">
-                <div className="w-full lg:w-1/2 bg-gray-800 shadow-lg rounded-lg p-4 sm:p-6">
+                <div className="w-full lg:w-1/2 bg-green-950 bg-opacity-70 shadow-lg rounded-lg p-4 sm:p-6">
                     <div className="h-[300px] sm:h-[400px]">
                         <Bar
                             data={getEmissionChartData()}
@@ -138,7 +138,7 @@ const Dashboard = () => {
                         />
                     </div>
                 </div>
-                <div className="w-full lg:w-1/2 bg-gray-800 shadow-lg rounded-lg p-4 sm:p-6">
+                <div className="w-full lg:w-1/2 bg-green-950 bg-opacity-70 shadow-lg rounded-lg p-4 sm:p-6">
                     <div className="h-[300px] sm:h-[400px]">
                         <Doughnut
                             data={getInternetUsageChartData()}
@@ -151,7 +151,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className="bg-gray-800 shadow-lg rounded-lg p-4 sm:p-6">
+            <div className="bg-green-950 bg-opacity-70 shadow-lg rounded-lg p-4 sm:p-6">
                 <h3 className="text-xl font-semibold text-gray-300 mb-4">Recommendations</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div className="bg-green-600 rounded-lg p-6 shadow-lg flex items-start space-x-4">
@@ -182,3 +182,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
